@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGM.GFMarcro", "GGM.GFMarcro\GGM.GFMarcro.csproj", "{60221947-C693-473C-AC41-261AFADF3C15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGM.GFMarcro.Core", "GGM.GFMarcro.Core\GGM.GFMarcro.Core.csproj", "{A3ED4F0B-223B-4EAC-BEFC-CE2ECBDE79FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60221947-C693-473C-AC41-261AFADF3C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60221947-C693-473C-AC41-261AFADF3C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60221947-C693-473C-AC41-261AFADF3C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60221947-C693-473C-AC41-261AFADF3C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3ED4F0B-223B-4EAC-BEFC-CE2ECBDE79FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3ED4F0B-223B-4EAC-BEFC-CE2ECBDE79FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3ED4F0B-223B-4EAC-BEFC-CE2ECBDE79FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3ED4F0B-223B-4EAC-BEFC-CE2ECBDE79FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA47DFEC-342C-4B42-8B3D-21AAB6CE6221}
+	EndGlobalSection
+EndGlobal
