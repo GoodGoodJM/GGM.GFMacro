@@ -13,7 +13,7 @@ namespace GGM.GFMarcro.Core.Recognition
                 throw new System.ArgumentNullException(nameof(screenImage));
             if (targetImage == null)
                 throw new System.ArgumentNullException(nameof(targetImage));
-            if(screenImage.Width < targetImage.Width)
+            if(screenImage.Width < targetImage.Width && screenImage.Height < targetImage.Height)
                 throw new RecognitionException(RecognitionExceptionType.SCREEN_IMAEG_IS_SMALLER_THAN_TARGET_IMAGE);
 
             using (var screenMatrix = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenImage))
