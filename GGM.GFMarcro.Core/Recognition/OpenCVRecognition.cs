@@ -28,7 +28,6 @@ namespace GGM.GFMarcro.Core.Recognition
                 );
                 return new SearchResult(maximumSimilarity, new Point(maximumPoint.X, maximumPoint.Y));
             }
-            throw new System.NotImplementedException();
         }
     }
 }
