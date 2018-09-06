@@ -1,3 +1,5 @@
+> 해당 프로젝트는 [제에고 블로그](http://yc0345.tistory.com/221?category=154281)의 글을 기반으로 작업됬습니다.
+
 # GGM.GFMarco
 
 GFMacro는 두개의 프로젝트로 나누어져 있습니다.
