@@ -26,7 +26,7 @@ namespace GGM.GFMarcro.Core.Recognition
                     out CVPoint minimumPoint,
                     out CVPoint maximumPoint
                 );
-                return new SearchResult(minimumSimilarity, maximumSimilarity, new Point(minimumPoint.X, minimumPoint.Y), new Point(maximumPoint.X, maximumPoint.Y));
+                return new SearchResult(maximumSimilarity, new Point(maximumPoint.X, maximumPoint.Y));
             }
             throw new System.NotImplementedException();
         }
