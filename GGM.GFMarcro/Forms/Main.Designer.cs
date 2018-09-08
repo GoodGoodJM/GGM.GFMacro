@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ExecuteButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
+            this.StopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,34 +44,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // ExecuteButton
             // 
-            this.button1.Location = new System.Drawing.Point(100, 384);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 21);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ExecuteButton.Location = new System.Drawing.Point(302, 381);
+            this.ExecuteButton.Name = "ExecuteButton";
+            this.ExecuteButton.Size = new System.Drawing.Size(75, 23);
+            this.ExecuteButton.TabIndex = 2;
+            this.ExecuteButton.Text = "Execute";
+            this.ExecuteButton.UseVisualStyleBackColor = true;
+            this.ExecuteButton.Click += new System.EventHandler(this.ExecuteEvent);
             // 
-            // button2
+            // StartButton
             // 
-            this.button2.Location = new System.Drawing.Point(302, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.StartButton.Location = new System.Drawing.Point(148, 420);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(75, 23);
+            this.StartButton.TabIndex = 3;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartEvent);
+            // 
+            // StopButton
+            // 
+            this.StopButton.Location = new System.Drawing.Point(281, 420);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(75, 23);
+            this.StopButton.TabIndex = 4;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopEvent);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 431);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(491, 455);
+            this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.ExecuteButton);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "MainForm";
@@ -83,7 +94,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ExecuteButton;
+        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Button StopButton;
     }
 }
