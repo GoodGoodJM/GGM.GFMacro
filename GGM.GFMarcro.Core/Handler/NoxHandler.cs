@@ -6,7 +6,7 @@ using System.Threading;
 namespace GGM.GFMarcro.Core.Handler
 {
     // Warning : This class is not thread-safe.
-    public class NoxHandler : IApplicationHandler
+    public class NoxHandler : BaseApplicationHandler
     {
         private const string QT5_WINDOW_ICON = "Qt5QWindowIcon";
         private const string SCREEN_BOARD_CLASS_WINDOW = "ScreenBoardClassWindow";
@@ -30,42 +30,19 @@ namespace GGM.GFMarcro.Core.Handler
             if (secondNode == IntPtr.Zero)
                 throw new ApplicationHandlerException(ApplicationHandlerExceptionType.CANNOT_FIND_APPLICATION);
 
-            TargetHandle = secondNode; // Kernel.User32.FindWindowEx(secondNode, IntPtr.Zero, SUB_WIN, SUB);
+            TargetHandle = secondNode;
             if (TargetHandle == IntPtr.Zero)
                 throw new ApplicationHandlerException(ApplicationHandlerExceptionType.CANNOT_FIND_APPLICATION);
         }
 
-        public string ApplicationName { get; }
-        public IntPtr ApplicationWindow { get; }
-        public IntPtr TargetHandle { get; }
+        public override string ApplicationName { get; }
+        public override IntPtr ApplicationWindow { get; }
+        public override IntPtr TargetHandle { get; }
 
-        public Bitmap GetScreenImage()
-        {
-            var applicationWindowGraphics = Graphics.FromHwnd(ApplicationWindow);
-            var rect = Rectangle.Round(applicationWindowGraphics.VisibleClipBounds);
-            Console.WriteLine($"ScreenSize is {rect}");
-            var image = new Bitmap(rect.Width, rect.Height);
-
-            using (var bitmapGraphics = Graphics.FromImage(image))
-            {
-                var hdc = bitmapGraphics.GetHdc();
-                bool isSucces = Kernel.User32.PrintWindow(TargetHandle, hdc, Kernel.User32.PrintWindowFlag.PW_RENDERFULLCONTENT);
-                if (!isSucces)
-                {
-                    image.Dispose();
-                    return null;
-                }
-                bitmapGraphics.ReleaseHdc(hdc);
-            }
-            return image;
-        }
-
-        public void SendClick(Point point)
+        public override void SendClick(Point point)
         {
             var transformedPoint = new Point(point.X / 2, point.Y / 2);
-            var lparam = new IntPtr(transformedPoint.X | (transformedPoint.Y << 16));
-            Kernel.User32.SendMessage(TargetHandle, Kernel.User32.MouseEventFlag.WM_LBUTTONDOWN, 1, lparam);
-            Kernel.User32.SendMessage(TargetHandle, Kernel.User32.MouseEventFlag.WM_LBUTTONUP, 0, lparam);
+            base.SendClick(transformedPoint);
         }
     }
 }

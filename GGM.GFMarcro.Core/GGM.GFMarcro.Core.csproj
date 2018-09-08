@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handler\BaseApplicationHandler.cs" />
     <Compile Include="Handler\Exception\ApplicationHandlerException.cs" />
     <Compile Include="Handler\IApplicationHandler.cs" />
     <Compile Include="Handler\NoxHandler.cs" />
