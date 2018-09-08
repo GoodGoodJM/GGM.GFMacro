@@ -59,6 +59,7 @@
     <Compile Include="Handler\BaseApplicationHandler.cs" />
     <Compile Include="Handler\Exception\ApplicationHandlerException.cs" />
     <Compile Include="Handler\IApplicationHandler.cs" />
+    <Compile Include="Handler\MomoHandler.cs" />
     <Compile Include="Handler\NoxHandler.cs" />
     <Compile Include="Kernel\User32.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
