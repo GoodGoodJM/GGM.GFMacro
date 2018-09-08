@@ -4,8 +4,8 @@
     {
         NOT_HANDLED_EXCEPTION,
         CANNOT_FIND_APPLICATION,
-
     }
+
     public class ApplicationHandlerException : System.Exception
     {
         public ApplicationHandlerException(ApplicationHandlerExceptionType type)
