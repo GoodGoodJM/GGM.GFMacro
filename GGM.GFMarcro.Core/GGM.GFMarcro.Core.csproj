@@ -67,6 +67,7 @@
     <Compile Include="Recognition\IRecognition.cs" />
     <Compile Include="Recognition\OpenCVRecognition.cs" />
     <Compile Include="Recognition\SearchResult.cs" />
+    <Compile Include="Util\ClickUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

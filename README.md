@@ -27,6 +27,8 @@ GGM.GFMacro.Core는 Windows 8.1 이상의 환경에서만 동작하며, 현재 N
 
 ### 진행될 작업 목록
 
-- [ ] Momo AppPlayer 지원.
+- [x] Momo AppPlayer 지원.
+- [ ] Macro용 유틸 클래스 지원.
+    - [x] Randomize Point 헬퍼기능
 - [ ] 다양한 TouchEvent 추가.
   - [ ] DragEvent
