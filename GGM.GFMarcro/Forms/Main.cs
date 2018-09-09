@@ -24,6 +24,7 @@ namespace GGM.GFMarcro.Forms
         IApplicationHandler _applicationHandler = new MomoHandler("[MOMO]앱플레이어-1");
         IRecognition _recognition = new OpenCVRecognition();
         Timer _timer;
+        Random _random = new Random();
 
         public MainForm()
         {
@@ -101,6 +102,7 @@ namespace GGM.GFMarcro.Forms
         private void TickEvent(object sender, EventArgs e)
         {
             ExecuteEvent(null, null);
+            _timer.Interval = _random.Next(1500, 3000);
         }
 
         private static void StopTimer(Timer timer)
